@@ -1,5 +1,7 @@
 package locators;
 
+import mockData.Item;
+import mockData.ItemsList;
 import org.openqa.selenium.By;
 
 
