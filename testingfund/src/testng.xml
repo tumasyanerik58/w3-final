@@ -1,8 +1,34 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name = "Parameterized Search Test">
+
+<suite name = "W3 website test">
+
     <test name = "test search functionality">
+        <classes>
+            <class name = "SearchTest" />
+        </classes>
+    </test>
+
+    <test name = "test registration">
+        <classes>
+            <class name = "RegistrationTest" />
+        </classes>
+    </test>
+
+    <test name = "courses validity test">
+        <classes>
+            <class name = "CoursesValidityTest" />
+        </classes>
+    </test>
+
+    <test name = "test whereToStart">
+        <classes>
+            <class name = "WhereToStartTest" />
+        </classes>
+    </test>
+
+    <test name = "test search functionality parameterized">
         <parameter name = "userInputSearch" value="react"/>
         <parameter name= "userInputCourse" value="html"/>
         <classes>
