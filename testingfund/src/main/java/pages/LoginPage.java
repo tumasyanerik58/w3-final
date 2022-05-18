@@ -18,34 +18,9 @@ public class LoginPage {
         driver.findElement(By.xpath("/html/body/div[1]/div/div/div[4]/div[1]/div/div[2]/form/div[1]/div[1]/span/span")).click();
     }
 
-    public void testCredentialsLessThanEight(){
-        driver.findElement(pageConstants.username_input).sendKeys("test3@test.com");
-        driver.findElement(pageConstants.password_input).sendKeys("Asdf3!", Keys.ENTER);
-    }
-
-    public void testCredentialsNoSpecial(){
-        driver.findElement(pageConstants.username_input).sendKeys("test3@test.com");
-        driver.findElement(pageConstants.password_input).sendKeys("Asdf1233", Keys.ENTER);
-    }
-
-    public void testCredentialsNoNumber(){
-        driver.findElement(pageConstants.username_input).sendKeys("test3@test.com");
-        driver.findElement(pageConstants.password_input).sendKeys("Asdfasdf!", Keys.ENTER);
-    }
-
-    public void testCredentialsNoUpperCase(){
-        driver.findElement(pageConstants.username_input).sendKeys("test3@test.com");
-        driver.findElement(pageConstants.password_input).sendKeys("asdf123!", Keys.ENTER);
-    }
-
-    public void testCredentialsNoLowerCase(){
-        driver.findElement(pageConstants.username_input).sendKeys("test3@test.com");
-        driver.findElement(pageConstants.password_input).sendKeys("ASDF123!", Keys.ENTER);
-    }
-
-    public void testCredentialsWrongEmail(){
-        driver.findElement(pageConstants.username_input).sendKeys("wrongemail");
-        driver.findElement(pageConstants.password_input).sendKeys("Asdf123!", Keys.ENTER);
+    public void testCredentials(String mail, String password){
+        driver.findElement(pageConstants.username_input).sendKeys(mail);
+        driver.findElement(pageConstants.password_input).sendKeys(password, Keys.ENTER);
     }
 
     public void testCorrectCredentialsNoFirstName(){

@@ -51,7 +51,7 @@ public class RegistrationTest {
     public void checkRegistrationLessThanEight(){
         loginPage = mainPage.goToLoginPage();
         loginPage.goToRegistration();
-        loginPage.testCredentialsLessThanEight();
+        loginPage.testCredentials("test3@test.com","Asdf3!");
         WebElement passwordInput = loginPage.getPasswordInput();
         assert(passwordInput.getCssValue("border-color").equals("rgb(217, 33, 44)"));
     }
@@ -60,7 +60,7 @@ public class RegistrationTest {
     public void CheckRegistrationNoSpecial(){
         loginPage = mainPage.goToLoginPage();
         loginPage.goToRegistration();
-        loginPage.testCredentialsNoSpecial();
+        loginPage.testCredentials("test3@test.com","Asdf1233");
         WebElement passwordInput = loginPage.getPasswordInput();
         assert(passwordInput.getCssValue("border-color").equals("rgb(217, 33, 44)"));
     }
@@ -69,7 +69,7 @@ public class RegistrationTest {
     public void CheckRegistrationNoNumber(){
         loginPage = mainPage.goToLoginPage();
         loginPage.goToRegistration();
-        loginPage.testCredentialsNoNumber();
+        loginPage.testCredentials("test3@test.com","Asdfasdf!");
         WebElement passwordInput = loginPage.getPasswordInput();
         assert(passwordInput.getCssValue("border-color").equals("rgb(217, 33, 44)"));
     }
@@ -78,7 +78,7 @@ public class RegistrationTest {
     public void CheckRegistrationNoUpperCase(){
         loginPage = mainPage.goToLoginPage();
         loginPage.goToRegistration();
-        loginPage.testCredentialsNoUpperCase();
+        loginPage.testCredentials("test3@test.com","asdf123!");
         WebElement passwordInput = loginPage.getPasswordInput();
         assert(passwordInput.getCssValue("border-color").equals("rgb(217, 33, 44)"));
     }
@@ -87,7 +87,7 @@ public class RegistrationTest {
     public void CheckRegistrationNoLowerCase(){
         loginPage = mainPage.goToLoginPage();
         loginPage.goToRegistration();
-        loginPage.testCredentialsNoLowerCase();
+        loginPage.testCredentials("test3@test.com","ASDF123!");
         WebElement passwordInput = loginPage.getPasswordInput();
         assert(passwordInput.getCssValue("border-color").equals("rgb(217, 33, 44)"));
     }
@@ -96,7 +96,7 @@ public class RegistrationTest {
     public void CheckRegistrationWrongEmail(){
         loginPage = mainPage.goToLoginPage();
         loginPage.goToRegistration();
-        loginPage.testCredentialsWrongEmail();
+        loginPage.testCredentials("wrongemail","Asdf123!");
         WebElement emailInput = loginPage.getEmailInput();
         assert(emailInput.getCssValue("border-color").equals("rgb(217, 33, 44)"));
     }
